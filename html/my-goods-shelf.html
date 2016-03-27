@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-我的货架</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="#" class="header-left left-back"></a>
+    <h1 class="header-title">我的货架</h1>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper" class="bg-white">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 我的货架 -->
+            <div class="table-shelf-header">货架将按以下顺序显示在您的店铺首页，<br>修改后请点击保存按钮！</div>
+            <table id="J_shelfList" class="table-shelf">
+                <thead>
+                <tr>
+                    <th width="34%">货架名称</th>
+                    <th width="20%">宝贝数</th>
+                    <th class="46%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input class="input-txt" type="text" placeholder="货架名称" value="热卖商品"></td>
+                    <td><input class="input-txt" type="text" placeholder="0" value="3"></td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-xl btn-radius btn-up" onclick="$.shelf._moveUp();"></button><button type="button" class="btn btn-success btn-xl btn-radius btn-dowm" onclick="$.shelf._moveDown();"></button><button type="button" class="btn btn-dangest btn-xl btn-radius btn-del" onclick="$.shelf._delete();"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input class="input-txt" type="text" placeholder="货架名称" value="热卖商品"></td>
+                    <td><input class="input-txt" type="text" placeholder="0" value="4"></td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-xl btn-radius btn-up" onclick="$.shelf._moveUp();"></button><button type="button" class="btn btn-success btn-xl btn-radius btn-dowm" onclick="$.shelf._moveDown();"></button><button type="button" class="btn btn-dangest btn-xl btn-radius btn-del" onclick="$.shelf._delete();"></button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- // 我的货架 -->
+            <div class="am-wingblank mt35" am-mode="15px">
+                <div class="btn-flex-box">
+                    <button type="button" class="btn btn-success btn-outline btn-xxl btn-radius" onclick=" $.shelf._add();">新增货架</button>
+                    <button type="button" class="btn btn-success btn-xxl btn-radius">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- Gotop -->
+<a href="#" class="gotop"></a>
+<!-- // Gotop -->
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/sweet-alert.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script>
+    ;(function($){
+        $.shelf = {
+            _add: function(){
+                var tpl = '';
+                tpl += '<tr>';
+                tpl += '<td><input class="input-txt" type="text" placeholder="货架名称"></td>';
+                tpl += '<td><input class="input-txt" type="text" placeholder="0"></td>';
+                tpl += '<td>';
+                tpl += '<button type="button" class="btn btn-success btn-xl btn-radius btn-up" onclick="$.shelf._moveUp();"></button>';
+                tpl += '<button type="button" class="btn btn-success btn-xl btn-radius btn-dowm" onclick="$.shelf._moveDown();"></button>';
+                tpl += '<button type="button" class="btn btn-dangest btn-xl btn-radius btn-del" onclick="$.shelf._delete();"></button>';
+                tpl += '</td>';
+                tpl += '</tr>';
+                $('#J_shelfList').append(tpl);
+            },
+            _delete: function(e){
+                var ev = e || window.event;
+                var _this = ev.target;
+                swal({
+                    title: "",
+                    text: "确认删除此货架吗?",
+                    type: "",
+                    showCancelButton: true,
+                    cancelButtonText: "取消",
+                    confirmButtonColor: "#1ba830",
+                    confirmButtonText: "确认"
+                }, function(){
+                    $(_this).parents('tr').remove();
+                    showToast("success","删除成功！");
+                });
+            },
+            _moveUp: function(e){
+                var ev = e || window.event;
+                var _this = ev.target;
+                var $prev =  $(_this).parents('tr').prev();
+                var $table = $(_this).parents('table');
+
+                if ($prev.length) {
+                    $(_this).parents('tr').insertBefore($prev);
+                } else {
+                    $(_this).parents('tr').appendTo($table);
+                }
+                showToast("success","上移成功！");
+            },
+            _moveDown: function(e){
+                var ev = e || window.event;
+                var _this = ev.target;
+                var $next =  $(_this).parents('tr').next();
+                var $table = $(_this).parents('table');
+
+                if ($next.length) {
+                    $(_this).parents('tr').insertAfter($next);
+                } else {
+                    $(_this).parents('tr').prependTo($table);
+                }
+                showToast("success","下移成功！");
+            }
+        }
+    }(jQuery));
+</script>
+</body>
+</html>

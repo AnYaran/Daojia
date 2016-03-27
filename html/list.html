@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-列表页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <h1 class="header-title">热带水果</h1>
+</header>
+<!-- // Header -->
+<!-- Filter Bar -->
+<div class="filter-bar-container second-header-bar">
+    <ul id="J_fiterBar" class="filter-bar">
+        <li><span>最新</span></li>
+        <li><span>最热</span></li>
+        <li class="droplist-trigger navigate-down active" data-target="#sortType"><span>价格从低到高</span></li>
+    </ul>
+    <ul id="sortType" class="droplist">
+        <li data-typeid="1" class="active">价格从低到高</li>
+        <li data-typeid="2">价格从高到低</li>
+    </ul>
+</div>
+<!-- // Filter Bar -->
+<!-- Bar Tab -->
+<nav class="bar-tab">
+    <div class="tab-item">
+        <a href="index.html">
+            <span class="icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+    </div>
+    <div class="tab-item has-submenu active">
+        <a href="javascript:;">
+            <span class="icon-list"></span>
+            <span class="tab-label">商品分类</span>
+        </a>
+        <!-- submenu -->
+        <div id="submenu" class="submenu">
+            <a href="#" class="active">热带水果</a>
+            <a href="#">五谷杂粮</a>
+            <a href="#">工艺优品</a>
+            <a href="#">养生南药</a>
+            <a href="#">海南特产</a>
+            <a href="#">茶饮茶歇</a>
+            <a href="#">调味香料</a>
+            <a href="#">乡野原味</a>
+        </div>
+        <!-- // submenu -->
+    </div>
+    <div class="tab-item">
+        <a href="#">
+            <span class="icon-cart"></span>
+            <span class="tab-label">购物车</span>
+        </a>
+    </div>
+    <div class="tab-item">
+        <a href="#">
+            <span class="icon-user"></span>
+            <span class="tab-label">个人中心</span>
+        </a>
+    </div>
+</nav>
+<!-- // Bar Tab -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 商品列表 -->
+            <div id="J_listWrapper" class="product-list">
+                <a href="#">
+                    <div class="pic lazy" data-original="../assets/upload/fruit_6.jpg"></div>
+                    <div class="main-info">
+                        <div class="txt">海南芒果5斤新鲜水果 大青芒果三亚特产</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic lazy" data-original="../assets/upload/fruit_7.jpg"></div>
+                    <div class="main-info">
+                        <div class="txt">精选珍珠番石榴 台湾芭乐</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic lazy" data-original="../assets/upload/fruit_8.jpg"></div>
+                    <div class="main-info">
+                        <div class="txt">山竹5A级热带进口水果5斤特级装现</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic lazy" data-original="../assets/upload/fruit_9.jpg"></div>
+                    <div class="main-info">
+                        <div class="txt">红心西柚葡萄柚柚子</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic lazy" data-original="../assets/upload/fruit_6.jpg"></div>
+                    <div class="main-info">
+                        <div class="txt">海南芒果5斤新鲜水果 大青芒果三亚特产</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic lazy" data-original="../assets/upload/fruit_7.jpg"></div>
+                    <div class="main-info">
+                        <div class="txt">精选珍珠番石榴 台湾芭乐</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic lazy" data-original="../assets/upload/fruit_8.jpg"></div>
+                    <div class="main-info">
+                        <div class="txt">山竹5A级热带进口水果5斤特级装现</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic lazy" data-original="../assets/upload/fruit_9.jpg"></div>
+                    <div class="main-info">
+                        <div class="txt">红心西柚葡萄柚柚子</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+            </div>
+            <!-- // 商品列表 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- Gotop -->
+<a href="#" id="gotop" class="gotop"></a>
+<!-- // Gotop -->
+<div id="J_droplistMask" class="droplist-mask"></div>
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/jquery.lazyload.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script src="../assets/js/pullToRefresh.js"></script>
+<script>
+    $(function(){
+        /*
+         * 筛选
+         * */
+        $.gohn._filterBar();
+
+        $('.droplist li').on('click',function(){
+            $(this).addClass('active').siblings('li').removeClass('active');
+            var str = {};
+            str.houseCate = $('#houseCate .active').data('typeid');
+            str.houseType = $('#houseType .active').data('typeid');
+            str.sortType = $('#sortType .active').data('typeid');
+            console.log(str);
+        });
+
+        // 图片延迟加载
+        $('.lazy').lazyload({
+            effect: "fadeIn",
+            threshold:200
+        });
+    });
+
+
+    // 获取下页数据
+    var generatedCount = 0
+        ,maxPage = 2;
+
+    function getNextPage(theScroller){
+        if (generatedCount > maxPage) {
+            $('.pullUp').removeClass('loading').addClass('loaded');
+            $('.pullUpLabel').html('到底了');
+            return false;
+        }
+        $.ajax({
+            method: "POST",
+            url: "../assets/ajax/data-product.json",
+            data: {page:generatedCount},
+            dataType: "json"
+        }).done(function(data){
+            var html = '';
+            for (var i = 0; i < data.length; i++) {
+                html += '<a href="'+ data[i].href +'">';
+                html += '<div class="pic async lazy" data-original="'+ data[i].pic +'"></div>';
+                html += '<div class="main-info">';
+                html += '<div class="txt">'+ data[i].text +'</div>';
+                html += '<div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥'+ data[i].price +'</span></div>';
+                html += '</div>';
+                html += '</a>';
+            }
+            $('#J_listWrapper').append(html);
+            // 图片延迟加载
+            $('.lazy').lazyload({
+                effect: "fadeIn",
+                threshold:200
+            });
+            ++generatedCount;
+            theScroller.refresh();		// Remember to refresh when contents are loaded (ie: on ajax completion)
+
+        }).fail(function(){
+            alert('请求失败');
+        });
+    }
+
+    // 获取最新数据
+    function getLatest(theScroller){
+        $.ajax({
+            method: "POST",
+            url: "../assets/ajax/data-product.json",
+            data: {page:generatedCount},
+            dataType: "json"
+        }).done(function(data){
+            if (data.length == 0) {
+                $('.pullDown').removeClass('loading').addClass('loaded');
+                $('.pullDownLabel').html('已经最新了');
+                return false;
+            } else {
+                var html = '';
+                for (var i = 0; i < data.length; i++) {
+                    html += '<a href="'+ data[i].href +'">';
+                    html += '<div class="pic async lazy" data-original="'+ data[i].pic +'"></div>';
+                    html += '<div class="main-info">';
+                    html += '<div class="txt">'+ data[i].text +'</div>';
+                    html += '<div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥'+ data[i].price +'</span></div>';
+                    html += '</div>';
+                    html += '</a>';
+                }
+                $('#J_listWrapper').prepend(html);
+                // 图片延迟加载
+                $('.lazy').lazyload({
+                    effect: "fadeIn",
+                    threshold:200
+                });
+                theScroller.refresh();		// Remember to refresh when contents are loaded (ie: on ajax completion)
+            }
+
+        }).fail(function(){
+            alert('请求失败');
+        });
+    }
+</script>
+</body>
+</html>

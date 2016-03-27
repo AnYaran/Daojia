@@ -1,0 +1,83 @@
+.menu-fixed {
+    position: fixed;
+    right: 10px;
+    bottom: 15px;
+    z-index: 99999;
+    &.open {
+        ul {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .menu-trigger {
+            transform: rotate(45deg);
+        }
+    }
+    .menu-trigger {
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+        margin-right: 5px;
+        background: url("../img/menu_trigger.png") no-repeat;
+        background-size: contain;
+        transition: all .3s linear;
+    }
+    ul {
+        position: absolute;
+        bottom: 54px;
+        right: 0;
+        width: 120px;
+        background-color: @white;
+        border-radius: 4px;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all .3s linear;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 7px 0;
+            border-color: @white transparent transparent;
+        }
+        li {
+            border-bottom: @border-default;
+            &:last-child {
+                border-bottom: 0;
+            }
+            a {
+                display: block;
+                padding: 12px;
+                line-height: 24px;
+                font-size: @font-size-base;
+                color: @gray-darker;
+                span {
+                    margin-right: 10px;
+                    vertical-align: top;
+                }
+                &:hover,
+                &:active,
+                &.active {
+                    color: @green;
+                    [class*="icon-"] {
+                        background-position-y: -24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: 99998;
+}

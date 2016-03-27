@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-分销商注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>加载中...</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="javascript:history.go(-1);" class="left-back header-left"></a>
+    <h1 class="header-title">分销商注册</h1>
+    <a href="#" class="header-right btn btn-link">登录</a>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content form-uc-wrapper">
+            <form method="post" action="../assets/ajax/data-login.json" id="myForm" class="form-horizontal" novalidate autocomplete="off">
+                <div class="form-group mt40">
+                    <label class="control-label"><i class="icon-o-user"></i></label>
+                    <div class="controls">
+                        <input type="text" name="uname" id="uname" class="input-txt" placeholder="用户名" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><i class="icon-o-shop"></i></label>
+                    <div class="controls">
+                        <input type="text" name="uname" id="uname" class="input-txt" placeholder="店铺名称" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><i class="icon-o-lock"></i></label>
+                    <div class="controls">
+                        <input type="password" name="pwd" id="pwd" class="input-txt"  placeholder="新密码" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><i class="icon-o-lock"></i></label>
+                    <div class="controls">
+                        <input type="password" name="pwd" id="pwd" class="input-txt"  placeholder="确认密码" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><i class="icon-o-phone"></i></label>
+                    <div class="controls">
+                        <button type="button" id="J_sendSms" class="pull-right btn-getcode">获取验证码</button>
+                        <input type="text" name="uname" id="uname" class="input-txt" placeholder="店长手机" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><i class="icon-pencil"></i></label>
+                    <div class="controls">
+                        <input type="text" name="vcode" id="vcode" class="input-txt" placeholder="请输入验证码" autocomplete="off">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="J_submitBtn" class="btn btn-block btn-success btn-xxl btn-radius">注册</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/jquery.cookie.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script src="../assets/js/page/page-login.js"></script>
+</body>
+</html>

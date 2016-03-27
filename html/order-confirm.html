@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-确认订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="javascript:history.go(-1);" class="header-left left-back"></a>
+    <h1 class="header-title">确认订单</h1>
+</header>
+<!-- // Header -->
+<!-- Bar ShoppingCart -->
+<div class="bar-shoppingcart">
+    <button type="button" class="btn btn-success btn-radius pull-right">确认</button>
+    <div class="cart-total pull-right">
+        <span class="cart-sum mt7">合计：<i>¥<em id="J_moneyTotal">58.00</em></i></span>
+    </div>
+</div>
+<!-- // Bar ShoppingCart -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 收货地址 -->
+            <a href="#" class="address-wrapper mt15">
+                <div class="receiver">
+                    <span class="pull-right">13308980898</span>
+                    <span class="pull-left">收货人：松子</span>
+                </div>
+                <div class="address-detail">收货地址：海南省 海口市 龙华区 国贸路24号海涯大厦8D  海南航冠公司</div>
+            </a>
+            <!-- // 收货地址 -->
+            <!-- 确认订单 -->
+            <div class="sc-list-wrapper">
+                <div class="sc-list-header">
+                    <div class="pull-left">
+                        <i class="icon-o-shop-1"></i>
+                        <span class="shop-name">海南果果家</span>
+                    </div>
+                </div>
+                <ul class="sc-list order-conform-list">
+                    <li class="sc-list-item">
+                        <a href="javascript:;">
+                            <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                            <div class="item-main">
+                                <div class="item-txt">云南蒙自石榴薄皮多汁软</div>
+                                <div class="item-spec">颜色:红色;重量:50g</div>
+                                <div class="item-meta">
+                                    <span class="item-price">￥<i class="J_unitPrice">1296.00</i></span>
+                                    <span class="item-amount">x<em class="J_itemNum">1</em></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="sc-list-item">
+                        <a href="javascript:;">
+                            <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                            <div class="item-main">
+                                <div class="item-txt">百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装百香果 12颗装</div>
+                                <div class="item-spec">颜色分类：白T+蓝裤 尺码：M 颜色分类：白T+蓝裤 尺码：M 颜色分类：白T+蓝裤 尺码：M 颜色分类：白T+蓝裤 尺码：M</div>
+                                <div class="item-meta">
+                                    <span class="item-price">￥<i class="J_unitPrice">1296.00</i></span>
+                                    <span class="item-amount">x<em class="J_itemNum">1</em></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- // 确认订单 -->
+            <ul class="order-table-view">
+                <li class="order-table-view-cell">
+                    <label class="control-label">配送方式</label>
+                    <span class="navigate-txt">快递  包邮</span>
+                </li>
+                <li class="order-table-view-cell">
+                    <label class="control-label">备注：</label>
+                    <div class="input-control">
+                        <input type="text" placeholder="选填，可填写和卖家协商一致的要求" class="input-txt">
+                    </div>
+                </li>
+                <li class="order-table-view-cell text-right">共 2 件商品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;合计：<span class="color-orange">¥58.00</span></li>
+            </ul>
+            <ul class="order-table-view mt15">
+                <li class="order-table-view-cell">
+                    <input type="checkbox" id="invoice" class="square-icheck pull-left mt16" checked><label class="control-label" for="invoice">发票</label>
+                </li>
+                <li class="order-table-view-cell invoice-info">
+                    <span>普通发票（纸质）</span><span class="ml25">个人</span><span class="ml25">明细</span><a href="#" class="ml25 color-green">修改</a>
+                </li>
+                <li class="order-table-view-cell invoice-info">
+                    <span>增值税发票</span><span class="ml20 company-name">海南航冠电子科技有限公司</span><span class="ml20">明细</span><a href="#" class="ml10 color-green">修改</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script>
+    var _total_money = 1920.68;
+    var _points = Number($('#points').val());
+    $('#iCheck').on('change',function(){
+       if($(this).prop('checked')) {
+           $('#J_moneyTotal').html((_total_money-_points).toFixed(2));
+       } else {
+           $('#J_moneyTotal').html((_total_money+_points).toFixed(2));
+       }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-选择货架</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="#" class="header-left left-back"></a>
+    <h1 class="header-title">选择货架</h1>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <div class="choose-shelf-block bg-white mt15">
+                <div class="shelf-block-header">挑选的宝贝</div>
+                <div class="shelf-media">
+                    <a href="#" class="media-object pull-left"><img src="../assets/upload/fruit_5.jpg" width="111" height="82"></a>
+                    <div class="media-body">
+                        <h3><a href="#">云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软...</a></h3>
+                        <p>价格：39.00元</p>
+                        <p>库存：100</p>
+                        <p>2个掌柜已上架</p>
+                    </div>
+                </div>
+                <div class="shelf-block-header"><a href="#" class="pull-right">新添货架</a>选择货架</div>
+                <div class="am-whitespace" am-mode="15px">
+                    <select class="cm-input-txt">
+                        <option>请选择货架</option>
+                    </select>
+                </div>
+            </div>
+            <div class="am-wingblank mt45" am-mode="15px">
+                <button type="button" id="J_submitBtn" class="btn btn-block btn-success btn-xxl btn-radius">确认上架</button>
+            </div>
+            <div class="am-wingblank mt45" am-mode="15px">
+                <div class="btn-flex-box">
+                    <button type="button" class="btn btn-success btn-outline btn-xxl btn-radius bg-white">重新上架</button>
+                    <button type="button" class="btn btn-success btn-xxl btn-radius">下架</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- Gotop -->
+<a href="#" class="gotop"></a>
+<!-- // Gotop -->
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+</body>
+</html>

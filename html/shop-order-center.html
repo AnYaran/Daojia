@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-分销商模块-我的订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>加载中...</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="javascript:history.go(-1);" class="left-back header-left"></a>
+    <h1 class="header-title">我的订单</h1>
+</header>
+<!-- // Header -->
+<!-- 搜索 -->
+<div class="form-search-wrapper second-header-bar" mode="white">
+    <form class="form-search">
+        <span><i class="icon-search"></i></span>
+        <input type="text" id="key" class="input-search" placeholder="请输入商品标题或者订单号">
+        <div class="search-btn"><input type="submit" value="搜索"></div>
+    </form>
+</div>
+<!-- 搜索 -->
+<!-- Tab Order -->
+<div class="tab-order-control third-header-bar">
+    <a href="#" class="control-item active">
+        <span>全部</span>
+    </a>
+    <a href="#" class="control-item">
+        <span>待付款</span>
+    </a>
+    <a href="#" class="control-item">
+        <span>待发货</span>
+    </a>
+    <a href="#" class="control-item">
+        <span>待收货</span>
+    </a>
+</div>
+<!-- Tab Order -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 订单为空 -->
+            <!--            <div class="page-result">
+                            <div class="page-result-wrap">
+                                <div class="page-result-pic" mode="page-null"></div>
+                                <div class="page-result-title">您还没有相关订单</div>
+                                <div class="page-result-brief">去看看有没有什么想买的</div>
+                                <div class="page-result-button">
+                                    <a href="#" class="btn btn-success btn-xxl btn-radius">去逛逛</a>
+                                </div>
+                            </div>
+                        </div>-->
+            <!-- // 订单为空 -->
+            <!-- 订单列表 -->
+            <div id="J_listWrapper" class="order-list-outer shop-order-list">
+                <!-- 待付款 -->
+                <div class="order-view" data-orderid="23">
+                    <div class="order-view-header">
+                        <div class="pull-right">下单时间：2015-11-03</div>
+                        <div class="pull-left">订单号：142545161942371</div>
+                    </div>
+                    <div class="order-view-body">
+                        <a href="#">
+                            <ul class="order-view-inner">
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="item-total">
+                                共2件商品&nbsp;&nbsp;合计：¥58.00&nbsp;&nbsp;（含运费¥0.00）
+                            </div>
+                            <div class="item-infos">
+                                <span class="pull-right">待付款</span>
+                                <i class="icon-o-user"></i><label>松子</label>
+                                <i class="icon-o-phone"></i><label>13308980898</label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- // 待付款 -->
+                <!-- 待发货 -->
+                <div class="order-view" data-orderid="23">
+                    <div class="order-view-header">
+                        <div class="pull-right">下单时间：2015-11-03</div>
+                        <div class="pull-left">订单号：142545161942371</div>
+                    </div>
+                    <div class="order-view-body">
+                        <a href="#">
+                            <ul class="order-view-inner">
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="item-total">
+                                共2件商品&nbsp;&nbsp;合计：¥58.00&nbsp;&nbsp;（含运费¥0.00）
+                            </div>
+                            <div class="item-infos">
+                                <span class="pull-right">待发货</span>
+                                <i class="icon-o-user"></i><label>松子</label>
+                                <i class="icon-o-phone"></i><label>13308980898</label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- // 待发货 -->
+                <!-- 待收货 -->
+                <div class="order-view" data-orderid="23">
+                    <div class="order-view-header">
+                        <div class="pull-right">下单时间：2015-11-03</div>
+                        <div class="pull-left">订单号：142545161942371</div>
+                    </div>
+                    <div class="order-view-body">
+                        <a href="#">
+                            <ul class="order-view-inner">
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="item-total">
+                                共2件商品&nbsp;&nbsp;合计：¥58.00&nbsp;&nbsp;（含运费¥0.00）
+                            </div>
+                            <div class="item-infos">
+                                <span class="pull-right">待收货</span>
+                                <i class="icon-o-user"></i><label>松子</label>
+                                <i class="icon-o-phone"></i><label>13308980898</label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- // 待收货 -->
+                <!-- 交易成功 -->
+                <div class="order-view" data-orderid="23">
+                    <div class="order-view-header">
+                        <div class="pull-right">下单时间：2015-11-03</div>
+                        <div class="pull-left">订单号：142545161942371</div>
+                    </div>
+                    <div class="order-view-body">
+                        <a href="#">
+                            <ul class="order-view-inner">
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                            <div class="returned-state">退款失败</div>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                            <div class="returned-state">退款失败</div>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="item-total">
+                                共2件商品&nbsp;&nbsp;合计：¥58.00&nbsp;&nbsp;（含运费¥0.00）
+                            </div>
+                            <div class="item-infos">
+                                <span class="pull-right">交易成功</span>
+                                <i class="icon-o-user"></i><label>松子</label>
+                                <i class="icon-o-phone"></i><label>13308980898</label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- // 交易成功 -->
+                <!-- 交易失败 -->
+                <div class="order-view" data-orderid="23">
+                    <div class="order-view-header">
+                        <div class="pull-right">下单时间：2015-11-03</div>
+                        <div class="pull-left">订单号：142545161942371</div>
+                    </div>
+                    <div class="order-view-body">
+                        <a href="#">
+                            <ul class="order-view-inner">
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="order-item">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="item-total">
+                                共2件商品&nbsp;&nbsp;合计：¥58.00&nbsp;&nbsp;（含运费¥0.00）
+                            </div>
+                            <div class="item-infos">
+                                <span class="pull-right">交易失败</span>
+                                <i class="icon-o-user"></i><label>松子</label>
+                                <i class="icon-o-phone"></i><label>13308980898</label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- // 交易失败 -->
+            </div>
+            <!-- // 订单列表 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script src="../assets/js/page/page-order-list.js"></script>
+</body>
+</html>

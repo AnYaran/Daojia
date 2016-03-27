@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-订单详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>加载中...</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="javascript:history.go(-1);" class="left-back header-left"></a>
+    <h1 class="header-title">订单详情</h1>
+</header>
+<!-- // Header -->
+<!-- Bar -->
+<div class="bar-order-dt">
+    <a href="#" class="btn btn-default-bor btn-lger btn-radius-sm">取消订单</a>
+    <a href="#" class="btn btn-success btn-lger btn-radius-sm">立即付款</a>
+</div>
+<!-- // Bar -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <div class="logistics-top">
+                <p>物流公司：圆通快递</p>
+                <p>物流单号：880490751189572180</p>
+            </div>
+            <a href="#" class="navigate-right">
+                <div class="logistics-detail">
+                    <div class="logistics-title">物流信息：</div>
+                        <ul class="timeline">
+                            <li class="active">
+                                <label class="timeline-label"></label>
+                                <h5 class="timeline-event">快递员派件中...</h5>
+                                <div class="timeline-time">2015-10-23    14:26:30</div>
+                            </li>
+                        </ul>
+                </div>
+            </a>
+            <div class="order-dt-addr">
+                <div class="addr-name">收货人：松子&nbsp;&nbsp;&nbsp;13308980898</div>
+                <div class="addr-dt">收货地址：海南省海口市国贸大道海涯国际大厦8D</div>
+            </div>
+            <div class="order-list-outer">
+                <!-- 待付款 -->
+                <div class="order-view" data-orderid="23">
+                    <div class="order-view-header">
+                        <span class="pull-right">待付款</span>
+                        <div class="pull-left">
+                            <i class="icon-o-shop-1"></i>
+                            <span class="shop-name">海南果果家</span>
+                        </div>
+                    </div>
+                    <div class="order-view-body">
+                        <ul class="order-view-inner">
+                            <li class="order-item">
+                                <a href="#">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn-refund btn btn-success btn-lg btn-radius-sm">申请退款</a>
+                            </li>
+                            <li class="order-item">
+                                <a href="#">
+                                    <div class="item-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                                    <div class="order-item-main">
+                                        <div class="pro-info">
+                                            <h3>云南蒙自石榴薄皮多汁软云南蒙自石榴薄皮多汁软</h3>
+                                            <p>颜色:红色;重量:50g</p>
+                                        </div>
+                                        <div class="pro-price">
+                                            <span class="price">¥29</span>
+                                            <span class="pro-num">x1</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn-refund btn btn-success btn-lg btn-radius-sm">申请退款</a>
+                            </li>
+                        </ul>
+                        <div class="item-total">
+                            共2件商品&nbsp;&nbsp;合计：¥58.00&nbsp;&nbsp;（含运费¥0.00）
+                        </div>
+                    </div>
+                </div>
+                <!-- // 待付款 -->
+            </div>
+            <div class="order-dt-binfo">
+                <p>订单编号：1348062996368950</p>
+                <p>创建时间：2015-10-23 14:42:20</p>
+            </div>
+            <!--  // Order Detail -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script>
+    var _total_money = 1920.68;
+    var _points = Number($('#points').val());
+    $('#iCheck').on('change',function(){
+        if($(this).prop('checked')) {
+            $('#J_moneyTotal').html((_total_money-_points).toFixed(2));
+        } else {
+            $('#J_moneyTotal').html((_total_money+_points).toFixed(2));
+        }
+    });
+</script>
+</body>
+</html>

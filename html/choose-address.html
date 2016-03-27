@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-选择收货地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>加载中...</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="javascript:history.go(-1);" class="left-back header-left"></a>
+    <h1 class="header-title">选择收货地址</h1>
+    <a href="#" class="header-right btn btn-link">新增</a>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content form-uc-wrapper">
+            <!-- Address List -->
+            <div class="addr-list mt15">
+                <div class="addr-item">
+                    <input type="checkbox" class="icheck" checked>
+                    <div class="addr-body">
+                        <h3>松子&nbsp;&nbsp;&nbsp;13308980898<span class="ml10 badge badge-success">默认</span></h3>
+                        <p>海南省海口市龙华区国贸大厦海涯国际大厦8D</p>
+                    </div>
+                    <a href="#" class="addr-edit"></a>
+                </div>
+                <div class="addr-item">
+                    <input type="checkbox" class="icheck">
+                    <div class="addr-body">
+                        <h3>松子&nbsp;&nbsp;&nbsp;13308980898</h3>
+                        <p>海南省海口市龙华区国贸大厦海涯国际大厦8D</p>
+                    </div>
+                    <a href="#" class="addr-edit"></a>
+                </div>
+            </div>
+            <!-- // Address List -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+</body>
+</html>

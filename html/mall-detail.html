@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-商品详情页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="#" class="header-left left-back"></a>
+    <h1 class="header-title">商品详情</h1>
+    <a href="#" class="header-right cart-icon"></a>
+</header>
+<!-- // Header -->
+<!-- Bar Tab -->
+<nav class="bar-btn-group">
+    <a href="javascript:;" onclick="$.gohn._addFavorites(this,23)" class="btn-favorite">
+        <i class="icon-star-sm"></i>
+        <span>收藏</span>
+    </a>
+    <div class="btn-left">
+        <a class="btn btn-success btn-block btn-xl btn-radius btn-outline J_modalTrigger" href="#J_properModal" data-toggle="modal" data-type="cart">加入购物车</a>
+    </div>
+    <div class="btn-right">
+        <a class="btn btn-success btn-block btn-xl btn-radius J_modalTrigger" href="#J_properModal" data-toggle="modal" data-type="buy">立即购买</a>
+    </div>
+</nav>
+<!-- // Bar Tab -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 轮播图 -->
+            <div class="swiper-container swiper-detail">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img data-src="../assets/upload/fruit_1.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="../assets/upload/fruit_2.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="../assets/upload/fruit_3.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img data-src="../assets/upload/fruit_4.jpg" class="swiper-lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- // 轮播图 -->
+            <!-- 基本信息 -->
+            <div class="dt-binfo">
+                <a href="javascript:;" data-toggle="popover" data-target="#J_sharePopover" data-mask="true" class="share">
+                    <i class="icn-share"></i>
+                    <span>分享</span>
+                </a>
+                <div class="text">平和柚琯溪红肉蜜柚红心柚子沙田柚西新鲜水果礼盒5斤包邮</div>
+                <div class="price">￥122.80</div>
+                <div class="meta"><span>市场价：<del>￥198.00</del></span><span>邮费：包邮</span><span>销量：5689件</span></div>
+            </div>
+            <!-- // 基本信息 -->
+            <!--  评价 -->
+            <section class="dt-cmt-wrapper mt10">
+                <div class="dt-cmt-tit"><a href="javascript:;" data-toggle="popover" data-target="#J_cmtPopover" class="more">更多</a>累计评价 <small>302</small></div>
+                <ul class="dt-cmt-list">
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <!-- <img src="../assets/img/avatar_default.png" alt="天涯海角用户头像"> -->
+                                <img src="../assets/upload/avatar_01.jpg" alt="MISS">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">MISS</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">便宜，味道很好。</div>
+                        <div class="dt-cmt-time">今天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                        <div class="dt-cmt-reply">
+                            <span>[商家]：</span>这个商品正在做活动，价格优惠，机不可失，现在是运费免费！
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!--  // 评价 -->
+            <!-- 商品详情/商品参数 -->
+            <div id="J_dtContent" class="dt-content mt10">
+                <div id="J_scrollSniffer" class="dt-tabs-nav">
+                    <a href="#" class="active">商品详情</a>
+                    <a href="#">商品参数</a>
+                </div>
+                <div id="tab-content" class="tab-content">
+                    <div class="tab-pane active">
+                        <div class="dt-content-main">
+                            <img data-original="../assets/upload/detail_01.jpg">
+                            <img data-original="../assets/upload/fruit_2.jpg">
+                            <img data-original="../assets/upload/fruit_3.jpg">
+                            <img data-original="../assets/upload/fruit_4.jpg">
+                            <img data-original="../assets/upload/fruit_5.jpg">
+                            <img data-original="../assets/upload/fruit_6.jpg">
+                        </div>
+                    </div>
+                    <div class="tab-pane">
+                        <div class="dt-content-main">
+                            <ul class="arg-list">
+                                <li><label>厂名：</label><span>海南航冠有限公司</span></li>
+                                <li><label>厂址：</label><span>海南省海口市龙华区国贸路24号</span></li>
+                                <li><label>厂家联系电话：</label><span>0898-66665555</span></li>
+                                <li><label>保质期：</label><span>10天</span></li>
+                                <li><label>包转方式：</label><span>12颗/袋</span></li>
+                                <li><label>同城服务：</label><span>同城24小时卖家送货上门</span></li>
+                                <li><label>品牌：</label><span>蔬果</span></li>
+                                <li><label>水果种类：</label><span>百香果</span></li>
+                                <li><label>重量：</label><span>约1500g</span></li>
+                                <li><label>产地：</label><span>中国大陆</span></li>
+                                <li><label>省份：</label><span>海南省</span></li>
+                                <li><label>城市：</label><span>琼海市</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // 商品详情/商品参数 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- 评价弹层 -->
+<section id="J_cmtPopover" class="cmt-popover">
+    <header class="header">
+        <a href="javascript:;" class="header-left left-back" data-dismiss="popover"></a>
+        <h1 class="header-title">累计评价</h1>
+        <a href="#" class="header-right cart-icon"></a>
+    </header>
+    <div id="page-wrapper">
+        <div id="page-scroller">
+            <div id="page-content" class="page-content">
+                <ul class="dt-cmt-list">
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <!-- <img src="../assets/img/avatar_default.png" alt="天涯海角用户头像"> -->
+                                <img src="../assets/upload/avatar_01.jpg" alt="MISS">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">MISS</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">便宜，味道很好。</div>
+                        <div class="dt-cmt-time">今天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                        <div class="dt-cmt-reply">
+                            <span>[商家]：</span>这个商品正在做活动，价格优惠，机不可失，现在是运费免费！
+                        </div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <!-- <img src="../assets/img/avatar_default.png" alt="天涯海角用户头像"> -->
+                                <img src="../assets/upload/avatar_01.jpg" alt="MISS">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">MISS</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">便宜，味道很好。</div>
+                        <div class="dt-cmt-time">今天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                        <div class="dt-cmt-reply">
+                            <span>[商家]：</span>这个商品正在做活动，价格优惠，机不可失，现在是运费免费！
+                        </div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <!-- <img src="../assets/img/avatar_default.png" alt="天涯海角用户头像"> -->
+                                <img src="../assets/upload/avatar_01.jpg" alt="MISS">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">MISS</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">便宜，味道很好。</div>
+                        <div class="dt-cmt-time">今天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                        <div class="dt-cmt-reply">
+                            <span>[商家]：</span>这个商品正在做活动，价格优惠，机不可失，现在是运费免费！
+                        </div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <!-- <img src="../assets/img/avatar_default.png" alt="天涯海角用户头像"> -->
+                                <img src="../assets/upload/avatar_01.jpg" alt="MISS">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">MISS</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">便宜，味道很好。</div>
+                        <div class="dt-cmt-time">今天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                    </li>
+                    <li class="dt-cmt-item">
+                        <div class="uinfo">
+                            <a href="#" class="avatar">
+                                <img src="../assets/upload/avatar_02.jpg" alt="哆啦A梦">
+                            </a>
+                            <div class="uinfo-main">
+                                <a href="#" class="uname">哆啦A梦</a>
+                                <ul class="star mt10">
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li class="on"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dt-cmt-txt">柚子很甜。祝老板生意兴隆。</div>
+                        <div class="dt-cmt-time">昨天 10:30</div>
+                        <div class="dt-cmt-reply">
+                            <span>[商家]：</span>这个商品正在做活动，价格优惠，机不可失，现在是运费免费！
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // 评价弹层 -->
+<!-- 分享弹层 -->
+<section id="J_sharePopover" class="share-popover">
+    <div class="share-title">将宝贝分享出去</div>
+    <div class="share-list">
+        <ul class="list-inner">
+            <li>
+                <a href="#">
+                    <span class="share-icn" hs-share="wx_friend"></span>
+                    <span class="txt">微信好友</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="share-icn" hs-share="wx_pyq"></span>
+                    <span class="txt">朋友圈</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="share-icn" hs-share="qq"></span>
+                    <span class="txt">QQ</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="share-icn" hs-share="qq_zone"></span>
+                    <span class="txt">QQ空间</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <button type="button" class="btn btn-default btn-block btn-radius btn-lger" data-dismiss="popover">取消</button>
+</section>
+<!-- // 分享弹层 -->
+<!-- Gotop -->
+<a href="#" class="gotop"></a>
+<!-- // Gotop -->
+<!-- 选择规格弹窗 -->
+<div id="J_properModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <div class="modal-header-main">
+                    <div class="dt-item-cover"><img src="../assets/upload/fruit_08.jpg"></div>
+                    <div class="dt-item-binfo">
+                        <div class="dt-item-price"><i class="rmb">￥</i><b id="J_ItemPrice"></b></div>
+                        <div class="dt-item-stock">(库存<span id="J_ItemStock"></span>件)</div>
+                        <div class="dt-item-args" id="J_SelectedSpec"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body scroller-wrapper">
+                <div class="scroller">
+                    <div id="J_SpecGroupOuter">
+                       <!-- <div id="J_SpecGroup_10004" class="J_SpecGroup spec-item">
+                            <h3 class="spec-title">机身颜色</h3>
+                            <p class="spec-list">
+                                <i data-id="1627207:28320" class="sel">白色 4.7寸</i>
+                                <i data-id="1627207:28341">黑色 4.7寸</i>
+                                <i data-id="1627207:28324">黄色 4.7寸</i>
+                            </p>
+                        </div>
+                        <div id="J_SpecGroup_1627207" class="J_SpecGroup spec-item">
+                            <h3 class="spec-title">套餐类型</h3>
+                            <p class="spec-list">
+                                <i data-id="1627207:28320" class="sel">官方标配</i>
+                                <i data-id="1627207:28341" class="disabled">套餐一</i>
+                            </p>
+                        </div>
+                        <div id="J_SpecGroup_5919063" class="J_SpecGroup spec-item">
+                            <h3 class="spec-title">机身内存</h3>
+                            <p class="spec-list">
+                                <i data-id="12304035:48072" class="sel">16GB</i>
+                                <i data-id="12304035:3222911">64GB</i>
+                                <i data-id="12304035:3222910">128GB</i>
+                            </p>
+                        </div>
+                        <div id="J_SpecGroup_12304035" class="J_SpecGroup spec-item">
+                            <h3 class="spec-title">版本类型</h3>
+                            <p class="spec-list">
+                                <i data-id="122216431:9507519">港澳台</i>
+                                <i data-id="122216431:27409">美国</i>
+                                <i data-id="122216431:27023">日本</i>
+                                <i data-id="122216431:27772" class="sel">中国大陆</i>
+                            </p>
+                        </div>-->
+                    </div>
+                    <dl class="spec-item amount-outer">
+                        <dt>购买数量</dt>
+                        <dd class="amount-wrap"><span class="disabled J_MinusBtn btn-minus"></span><input type="text" value="1" class="J_Amount"><span class="J_PlusBtn btn-plus"></span></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="J_triggerType">
+                <input type="hidden" id="J_specListInput">
+                <button type="button" class="btn btn-success btn-block btn-xl btn-radius" id="J_submitBtn">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 选择规格弹窗 -->
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/jquery.lazyload.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script src="../assets/js/page/page-mall.js"></script>
+<script>
+    try{
+        var _DATA_Detail = {
+            "detail":{
+                "defaultItemPrice":"6088.00 - 7848.00",
+                "ItemQuantity":1476
+            },
+            "valItemInfo":{
+                "skuMap":{
+                    ";10004:709990523;1627207:21966;5919063:3266779;12304035:3222910;":{
+                        "cspuId":1000005301003722,
+                        "price":"7788.00",
+                        "priceCent":778800,
+                        "skuId":75046843406,
+                        "stock":20
+                    },
+                    ";10004:709990523;1627207:21966;5919063:3266779;12304035:3222911;":{
+                        "cspuId":1000005301002698,
+                        "price":"7288.00",
+                        "priceCent":728800,
+                        "skuId":75046843407,
+                        "stock":30
+                    },
+                    ";10004:709990523;1627207:21966;5919063:3266779;12304035:48072;":{
+                        "cspuId":1000005301001674,
+                        "price":"6088.00",
+                        "priceCent":608800,
+                        "skuId":75046843408,
+                        "stock":109
+                    },
+                    ";10004:709990523;1627207:21966;5919063:3266781;12304035:3222910;":{
+                        "cspuId":1000005301003722,
+                        "price":"7848.00",
+                        "priceCent":784800,
+                        "skuId":75917678326,
+                        "stock":20
+                    },
+                    ";10004:709990523;1627207:21966;5919063:3266781;12304035:3222911;":{
+                        "cspuId":1000005301002698,
+                        "price":"6948.00",
+                        "priceCent":694800,
+                        "skuId":75917678327,
+                        "stock":0
+                    },
+                    ";10004:709990523;1627207:21966;5919063:3266781;12304035:48072;":{
+                        "cspuId":1000005301001674,
+                        "price":"6148.00",
+                        "priceCent":614800,
+                        "skuId":75917678328,
+                        "stock":0
+                    },
+                    ";10004:709990523;1627207:21966;5919063:6536025;12304035:3222910;":{
+                        "cspuId":1000005301003722,
+                        "price":"7788.00",
+                        "priceCent":778800,
+                        "skuId":85074012482,
+                        "stock":17
+                    },
+                    ";10004:709990523;1627207:21966;5919063:6536025;12304035:3222911;":{
+                        "cspuId":1000005301002698,
+                        "price":"6888.00",
+                        "priceCent":688800,
+                        "skuId":73407363289,
+                        "stock":44
+                    },
+                    ";10004:709990523;1627207:21966;5919063:6536025;12304035:48072;":{
+                        "cspuId":1000005301001674,
+                        "price":"6088.00",
+                        "priceCent":608800,
+                        "skuId":67652206710,
+                        "stock":294
+                    },
+                    ";10004:709990523;1627207:28320;5919063:3266779;12304035:3222910;":{
+                        "cspuId":1000005301009866,
+                        "price":"7788.00",
+                        "priceCent":778800,
+                        "skuId":75046843409,
+                        "stock":16
+                    },
+                    ";10004:709990523;1627207:28320;5919063:3266779;12304035:3222911;":{
+                        "cspuId":1000005301008842,
+                        "price":"6888.00",
+                        "priceCent":688800,
+                        "skuId":75046843410,
+                        "stock":12
+                    },
+                    ";10004:709990523;1627207:28320;5919063:3266779;12304035:48072;":{
+                        "cspuId":1000005301007818,
+                        "price":"6088.00",
+                        "priceCent":608800,
+                        "skuId":75046843411,
+                        "stock":107
+                    },
+                    ";10004:709990523;1627207:28320;5919063:3266781;12304035:3222910;":{
+                        "cspuId":1000005301009866,
+                        "price":"7848.00",
+                        "priceCent":784800,
+                        "skuId":75917678329,
+                        "stock":10
+                    },
+                    ";10004:709990523;1627207:28320;5919063:3266781;12304035:3222911;":{
+                        "cspuId":1000005301008842,
+                        "price":"6948.00",
+                        "priceCent":694800,
+                        "skuId":75917678330,
+                        "stock":0
+                    },
+                    ";10004:709990523;1627207:28320;5919063:3266781;12304035:48072;":{
+                        "cspuId":1000005301007818,
+                        "price":"6148.00",
+                        "priceCent":614800,
+                        "skuId":75917678331,
+                        "stock":0
+                    },
+                    ";10004:709990523;1627207:28320;5919063:6536025;12304035:3222910;":{
+                        "cspuId":1000005301009866,
+                        "price":"7788.00",
+                        "priceCent":778800,
+                        "skuId":73305391461,
+                        "stock":14
+                    },
+                    ";10004:709990523;1627207:28320;5919063:6536025;12304035:3222911;":{
+                        "cspuId":1000005301008842,
+                        "price":"6888.00",
+                        "priceCent":688800,
+                        "skuId":73407363290,
+                        "stock":72
+                    },
+                    ";10004:709990523;1627207:28320;5919063:6536025;12304035:48072;":{
+                        "cspuId":1000005301007818,
+                        "price":"6088.00",
+                        "priceCent":608800,
+                        "skuId":67652206711,
+                        "stock":271
+                    },
+                    ";10004:709990523;1627207:28326;5919063:3266779;12304035:3222910;":{
+                        "cspuId":1000005301006794,
+                        "price":"7788.00",
+                        "priceCent":778800,
+                        "skuId":75046843412,
+                        "stock":17
+                    },
+                    ";10004:709990523;1627207:28326;5919063:3266779;12304035:3222911;":{
+                        "cspuId":1000005301005770,
+                        "price":"7088.00",
+                        "priceCent":708800,
+                        "skuId":75046843413,
+                        "stock":22
+                    },
+                    ";10004:709990523;1627207:28326;5919063:3266779;12304035:48072;":{
+                        "cspuId":1000005301004746,
+                        "price":"6088.00",
+                        "priceCent":608800,
+                        "skuId":75046843414,
+                        "stock":120
+                    },
+                    ";10004:709990523;1627207:28326;5919063:3266781;12304035:3222910;":{
+                        "cspuId":1000005301006794,
+                        "price":"7848.00",
+                        "priceCent":784800,
+                        "skuId":75917678332,
+                        "stock":10
+                    },
+                    ";10004:709990523;1627207:28326;5919063:3266781;12304035:3222911;":{
+                        "cspuId":1000005301005770,
+                        "price":"6948.00",
+                        "priceCent":694800,
+                        "skuId":75917678333,
+                        "stock":0
+                    },
+                    ";10004:709990523;1627207:28326;5919063:3266781;12304035:48072;":{
+                        "cspuId":1000005301004746,
+                        "price":"6148.00",
+                        "priceCent":614800,
+                        "skuId":75917678334,
+                        "stock":0
+                    },
+                    ";10004:709990523;1627207:28326;5919063:6536025;12304035:3222910;":{
+                        "cspuId":1000005301006794,
+                        "price":"7788.00",
+                        "priceCent":778800,
+                        "skuId":85074012483,
+                        "stock":20
+                    },
+                    ";10004:709990523;1627207:28326;5919063:6536025;12304035:3222911;":{
+                        "cspuId":1000005301005770,
+                        "price":"6888.00",
+                        "priceCent":688800,
+                        "skuId":73407363291,
+                        "stock":51
+                    },
+                    ";10004:709990523;1627207:28326;5919063:6536025;12304035:48072;":{
+                        "cspuId":1000005301004746,
+                        "price":"6088.00",
+                        "priceCent":608800,
+                        "skuId":67652206709,
+                        "stock":200
+                    }
+                },
+                "skuName":[
+                    {
+                        "id":"10004",
+                        "text":"网络类型",
+                        "values":[
+                            {
+                                "id":"709990523",
+                                "text":"无需合约版"
+                            }
+                        ]
+                    },
+                    {
+                        "id":"1627207",
+                        "text":"机身颜色",
+                        "values":[
+                            {
+                                "id":"28326",
+                                "text":"银色"
+                            },
+                            {
+                                "id":"21966",
+                                "text":"深空灰色"
+                            },
+                            {
+                                "id":"28320",
+                                "text":"金色"
+                            },
+                            {
+                                "id":"28328",
+                                "text":"白色"
+                            }
+                        ]
+                    },
+                    {
+                        "id":"5919063",
+                        "text":"套餐类型",
+                        "values":[
+                            {
+                                "id":"6536025",
+                                "text":"官方标配"
+                            },
+                            {
+                                "id":"3266779",
+                                "text":"套餐一"
+                            },
+                            {
+                                "id":"3266781",
+                                "text":"套餐二"
+                            }
+                        ]
+                    },
+                    {
+                        "id":"12304035",
+                        "text":"机身内存",
+                        "values":[
+                            {
+                                "id":"48072",
+                                "text":"16GB"
+                            },
+                            {
+                                "id":"3222911",
+                                "text":"64GB"
+                            },
+                            {
+                                "id":"3222910",
+                                "text":"128GB"
+                            }
+                        ]
+                    }
+                ]
+            }
+        };
+    }catch(e){ }
+
+    var pageScroll;
+    /*
+     * 初始化iScroll
+     * */
+    pageScroll = new IScroll('#page-wrapper',{
+        probeType: 2,
+        mouseWheel: true,
+        tap: true,
+        preventDefault: false
+    });
+
+    $('[data-toggle="popover"]').on('click', function () {
+       var _target = $(this).data('target');
+        var _mask = $(this).data('mask');
+        $(_target).addClass('open');
+        if (_mask) {
+            $('body').append('<div class="modal-backdrop"></div>');
+        }
+    });
+    $('[data-dismiss="popover"]').on('click',function(){
+        $(this).parents('.open').removeClass('open');
+        $('.modal-backdrop').remove();
+    });
+    $('body').on('click','.modal-backdrop',function(){
+        $('#J_sharePopover').removeClass('open');
+        $('.modal-backdrop').remove();
+    });
+
+    // 图片延迟加载
+    $('.dt-content-main img').lazyload({
+        effect: "fadeIn",
+        threshold:200
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-申请退货</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="#" class="header-left left-back"></a>
+    <h1 class="header-title">申请退货</h1>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <form class="refund-form-horizontal" method="post" action="#">
+                <div class="form-group">
+                    <label class="control-label">申请服务</label>
+                    <div class="controls">
+                        <div class="input-val">退货退款</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><em>*</em> 退货原因</label>
+                    <div class="controls">
+                        <select>
+                            <option>请选择退货原因</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label"><em>*</em> 退款金额</label>
+                    <div class="controls">
+                        <span class="rmb">¥</span>
+                        <input class="color-red-darker" type="text" value="39.00">
+                    </div>
+                </div>
+                <div class="help-block">（最多39.00元，含发货邮费0.00元）</div>
+                <div class="form-group">
+                    <label class="control-label">退货说明</label>
+                    <div class="controls">
+                        <input type="text" placeholder="请填写退货说明（可不填）">
+                    </div>
+                </div>
+                <div class="upload-img-wrap mt15">
+                    <i class="icn-camera"></i>
+                    <span class="pull-right hide">上传凭证 最多三张</span>
+                    <input type="file">
+                    <ul class="preview-list">
+                        <li><span class="icn-del"></span><img src="../assets/upload/uload_01.png"></li>
+                        <li><span class="icn-del"></span><img src="../assets/upload/uload_01.png"></li>
+                    </ul>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success btn-block btn-xxl btn-radius">提交申请</button>
+                </div>
+            </form>
+            <!-- 申请成功 -->
+            <div class="page-result">
+                <div class="page-result-wrap">
+                    <div class="page-result-pic" mode="page-ok"></div>
+                    <div class="page-result-title">成功提交申请，等待商家处理！</div>
+                </div>
+            </div>
+            <!-- // 申请成功 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script src="../assets/js/ajaxupload.js"></script>
+<script>
+    var OrderID = 'w35435';
+    var $J_orderList = $('#J_orderList');
+
+    /*
+     * 浮层显示隐藏
+     * */
+    $('[data-toggle="popover"]').on('click',function(){
+        var $this = $(this)
+                ,$target = $($this.data('target'));
+        $target.addClass('active');
+    });
+    $('[data-dismiss="popover"]').on('click',function(){
+        $('#myPopover').removeClass('active');
+    });
+
+    /*
+     * 点击产品列表的确认按钮
+     * */
+    $('#J_confirmBtn').on('click',function(){
+        var selectImgArr = []; // 已选产品图片数组
+        var selectPidArr = []; // 已选产品ID数组
+        var $checkedLen = $J_orderList.find('.icheck:checked').length;
+        if ($checkedLen == 0) {
+            $.gohn._showTip('请选择要退的宝贝');
+            return false;
+        }
+        $J_orderList.find('.icheck:checked').each(function(){
+            var $this = $(this)
+                    ,$pid = $this.val()
+                    ,$parent = $(this).parents('.order-item')
+                    ,imgUrl = $parent.find('.item-cover').data('url');
+            selectImgArr.push(imgUrl);
+            selectPidArr.push($pid);
+        });
+        $('#myPopover').removeClass('active');
+        $('#selectPros').val(selectPidArr.join());
+        refreshSelectList(selectImgArr,$checkedLen);
+    });
+
+    /*
+     * 刷新已选退货产品
+     * */
+    function refreshSelectList(imgArr,len){
+        var _selectTpl = '';
+        _selectTpl += '<div class="returned-goods-list">';
+        _selectTpl += '<span class="pull-right">已选 '+len+' 件</span>';
+        _selectTpl += '<ul class="pro-img-list">';
+
+        var selectLen = imgArr.length > 3 ? 3 : imgArr.length;
+        for (var i = 0 ; i < selectLen ; i++) {
+            _selectTpl += '<li><div class="img" style="background-image: url('+imgArr[i]+')"></div></li>';
+        }
+        if (imgArr.length > 3) {
+            _selectTpl += '<li>...</li>';
+        }
+        _selectTpl += '</ul>';
+        _selectTpl += '</div>';
+        $('#J_SelectedGoodsList').html(_selectTpl);
+    }
+
+    /*
+     * 上传图片
+     * */
+    /*
+     * 获取上传图片的相关信息
+     * */
+    var oBtn = document.getElementById("fileImage");
+    var $picPreview = $("#preview");
+    var $J_UploadData = $('.J_UploadData');
+    new AjaxUpload(oBtn,{
+        action:"../assets/ajax/upload.php",
+        name:"upload",
+        onSubmit:function(file,ext){
+            if(ext && /^(jpg|jpeg|png|gif)$/.test(ext)){
+                //ext是后缀名
+                $.gohn._showTip1('正在上传图片，请稍后');
+                oBtn.disabled = "disabled";
+            }else{
+                $.gohn._showTip("不支持非图片格式！");
+                return false;
+            }
+        },
+        onComplete:function(file,response){
+            oBtn.disabled = "";
+            oBtn.value = "再上传一张图片";
+            $('.error-tip').remove();
+            var html = '';
+            html += '<li data-img="'+file+'">';
+            html += '<span class="icon-del upload_delete"></span>';
+            html += '<div class="img" style="background-image: url(../assets/uploads/'+file+')"></div>';
+            html += '</li>';
+            $picPreview.append(html);
+            UploadDataRefresh();
+        }
+    });
+
+    function UploadDataRefresh() {
+        var J_UploadDataArr = [];
+        $picPreview.find('li').each(function(){
+            var fileName =  $(this).data('img');
+            J_UploadDataArr.push(fileName);
+        });
+        if (J_UploadDataArr.length >= 3) {
+            oBtn.disabled = "disabled";
+            return false;
+        } else {
+            oBtn.disabled = "";
+        }
+
+        $J_UploadData.val(J_UploadDataArr.join());
+    }
+    // 删除图片
+    $picPreview.on('click','.upload_delete',function(){
+        $(this).parents('li').remove();
+        UploadDataRefresh();
+    });
+
+
+    /*
+     * 点击提交申请
+     * */
+    $('#J_submitBtn').on('click',function(){
+        var _selectPros = $('#selectPros').val();
+        if ($.trim(_selectPros) == "") {
+            $.gohn._showTip("请选择退货商品");
+            return false;
+        }
+
+        var _refundMoney = $('#refundMoney').val();
+        var _maxNum = Number($('#refundMoney').data('max'));
+        if ($.trim(_refundMoney) == "") {
+            $.gohn._showTip("请输入退款金额");
+            $('#refundMoney').focus();
+            return false;
+        }
+
+        if (!$.utils._regNumber(_refundMoney)) {
+            $.gohn._showTip("请输入正确的格式");
+            $('#refundMoney').focus();
+            return false;
+        }
+
+        if ($.trim(_refundMoney) > _maxNum) {
+            $.gohn._showTip("退款金额最多只能输入"+_maxNum);
+            $('#refundMoney').focus();
+            return false;
+        }
+
+        var _refundReason = $('#refundReason').val();
+        if ($.trim(_refundReason) == "") {
+            $.gohn._showTip("请选择退货原因");
+            $('#refundReason').focus();
+            return false;
+        }
+
+        // 提交表单
+        $('#myForm').submit();
+    });
+
+</script>
+</body>
+</html>

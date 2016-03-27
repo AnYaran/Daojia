@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-退款详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="javascript:history.go(-1);" class="header-left left-back"></a>
+    <h1 class="header-title">退款详情</h1>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 退款状态/成功 -->
+            <div class="refund-top">
+                <div class="refund-state" mode="success">退款成功</div>
+                <div class="refund-meta">
+                    <label>退款金额：</label>39.00元<br>
+                    <label>退款时间：</label>2015-10-26  16:42
+                </div>
+            </div>
+            <!-- // 退款状态/成功 -->
+            <!-- 退款状态/失败 -->
+            <div class="refund-top">
+                <div class="refund-state" mode="fail">退款失败</div>
+                <div class="refund-meta">
+                    <label>失败原因：</label>商家拒绝退款<br>
+                    <label>失败时间：</label>2015-10-26  16:42
+                </div>
+            </div>
+            <!-- // 退款状态/失败 -->
+            <!-- 退款状态/待处理 -->
+            <div class="refund-top">
+                <div class="refund-state" mode="waiting">待处理</div>
+                <div class="refund-extra">
+                    等待商家处理...
+                </div>
+            </div>
+            <!-- // 退款状态/待处理 -->
+            <!-- 退款状态/已取消申请 -->
+            <div class="refund-top">
+                <div class="refund-state" mode="fail">已取消申请</div>
+                <div class="refund-extra">
+                    您已取消退货/退款申请。
+                </div>
+            </div>
+            <!-- // 退款状态/已取消申请 -->
+            <!-- 退款状态/商家同意退货退款 -->
+            <div class="refund-top">
+                <div class="refund-state" mode="agree">商家同意退货退款</div>
+                <div class="refund-extra">
+                    <p> 请填写退货物流信息：</p>
+                    <form class="refund-form">
+                        <div class="input-group">
+                            <label>物流公司：</label>
+                            <input type="text" placeholder="请填写物流公司名称">
+                        </div>
+                        <div class="input-group">
+                            <label>物流单号：</label>
+                            <input type="text" placeholder="请输入物流单号">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success btn-xl btn-radius">确认提交</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- // 退款状态/商家同意退货退款 -->
+            <!-- 退款状态/成功提交物流信息 -->
+            <div class="refund-top">
+                <div class="refund-state" mode="ok">成功提交物流信息</div>
+                <div class="refund-extra">
+                    <p>等待商家退款。</p>
+                    <div class="color-gray-dark">
+                        物流公司：圆通快递<br>物流单号：880490751189572180
+                    </div>
+                </div>
+            </div>
+            <!-- // 退款状态/成功提交物流信息 -->
+            <!-- 退款详情 -->
+            <div class="card mt15">
+                <ul class="card-inner-list">
+                    <li>
+                        <label>店铺名称</label>
+                        <div>海南果果家</div>
+                    </li>
+                    <li>
+                        <label>售后类型</label>
+                        <div>仅退款</div>
+                    </li>
+                    <li>
+                        <label>退款金额</label>
+                        <div>39.00元</div>
+                    </li>
+                    <li>
+                        <label>退款原因</label>
+                        <div>未收到货</div>
+                    </li>
+                    <li>
+                        <label>售后说明</label>
+                        <div>-</div>
+                    </li>
+                    <li>
+                        <label>售后编号</label>
+                        <div>800149140040773</div>
+                    </li>
+                    <li>
+                        <label>申请时间</label>
+                        <div>2015-10-26  09:04</div>
+                    </li>
+                </ul>
+            </div>
+            <!-- // 退款详情 -->
+            <!-- 取消申请 -->
+            <div class="am-wingblank mt30" am-mode="10px">
+                <button type="button" class="btn btn-success btn-xxl btn-radius btn-block">取消申请</button>
+            </div>
+            <!-- // 取消申请 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- Modal -->
+<div id="J_AddWaybillNo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <form id="myForm" method="post" action="#" class="refund-apply-form" novalidate>
+                    <div class="input-group">
+                        <div class="input-row">
+                            <label>快递公司</label>
+                            <div class="input-control">
+                                <select name="expressCompany" id="expressCompany">
+                                    <option value="">请选择快递公司</option>
+                                    <option value="0">申通</option>
+                                    <option value="1">韵达</option>
+                                    <option value="2">圆通</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <label>运单编号</label>
+                            <div class="input-control">
+                                <input type="text" name="waybillNo" id="waybillNo" class="input-txt">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" data-dismiss="modal" class="btn btn-default btn-radius-sm">取消</button>
+                        <button type="button" id="J_submitBtn" class="btn btn-info btn-radius-sm">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Modal -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/modal.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script>
+    /*
+    * 填写运单编号表单
+    * */
+    $('#J_submitBtn').on('click',function(){
+        var _expressCompany = $('#expressCompany').val();
+        if ($.trim(_expressCompany) == "") {
+            $.gohn._showTip("请选择快递公司");
+            $('#expressCompany').focus();
+            return false;
+        }
+
+        var _waybillNo = $('#waybillNo').val();
+        if ($.trim(_waybillNo) == "") {
+            $.gohn._showTip("请输入运单编号");
+            $('#waybillNo').focus();
+            return false;
+        }
+        $('#myForm').submit();
+    });
+
+    /*
+    * 点击取消退货
+    * */
+    $('#J_cancelBtn').on('click',function(){
+        if(window.confirm("确定取消退货吗？")) {
+            $.gohn._showTip('取消成功！');
+            window.location.reload();
+        }
+    });
+</script>
+</body>
+</html>

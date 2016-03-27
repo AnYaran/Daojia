@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-店铺首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- 搜索 -->
+<div class="form-search-wrapper header-bar" mode="30">
+    <div class="form-search">
+        <span><i class="icon-search"></i></span>
+        <input type="text" id="key" class="input-search" placeholder="请输入商品关键字">
+    </div>
+    <button type="button" class="btn btn-warning btn-medium btn-radius">搜本店</button>
+    <button type="button" class="btn btn-success btn-medium btn-radius">搜全站</button>
+</div>
+<!-- 搜索 -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 店铺信息 -->
+            <div class="shop-banner" style="background-image: url(../assets/upload/shop_banner.jpg)"></div>
+            <div class="shop-binfo">
+                <div class="shop-cover" style="background-image: url(../assets/upload/shop_cover_01.png)"></div>
+                <div class="shop-name">海南果果园</div>
+                <a href="javascritp:;" class="btn btn-success btn-medium btn-radius-sm btn-outline" onclick="HS.Favorites._toggle(event,45)">+ 收藏</a>
+            </div>
+            <!-- // 店铺信息 -->
+            <!-- 店铺导航 -->
+            <nav class="shop-bar-tab">
+                <div class="tab-item">
+                    <a href="index.html">
+                        <span class="shop-icon-home"></span>
+                        <span class="tab-label">首页</span>
+                    </a>
+                </div>
+                <div class="tab-item has-submenu">
+                    <a href="javascript:;" onclick="HS.shopSubMenu._toggle();">
+                        <span class="shop-icon-list"></span>
+                        <span class="tab-label">商品分类</span>
+                    </a>
+                    <!-- submenu -->
+                    <div class="shop-submenu">
+                        <a href="#" class="active">全部商品</a>
+                        <a href="#">热带水果</a>
+                        <a href="#">五谷杂粮</a>
+                        <a href="#">工艺优品</a>
+                        <a href="#">养生南药</a>
+                        <a href="#">海南特产</a>
+                        <a href="#">茶饮茶歇</a>
+                        <a href="#">调味香料</a>
+                        <a href="#">乡野原味</a>
+                    </div>
+                    <!-- // submenu -->
+                </div>
+                <div class="tab-item">
+                    <a href="#">
+                        <span class="shop-icon-talk"></span>
+                        <span class="tab-label">联系卖家</span>
+                    </a>
+                </div>
+            </nav>
+            <!-- // 店铺导航 -->
+            <!-- 新品推荐 -->
+            <div class="shop-headline">
+                <a href="#" class="more">更多</a>
+                <i class="shop-icon-sale"></i>
+                <span>新品推荐</span>
+            </div>
+            <div class="newest-recommend">
+                <a href="#" class="main-item">
+                    <div class="cover" style="background-image: url(../assets/upload/fruit_08.jpg)"></div>
+                    <span class="txt">现货新鲜水果黄柠檬</span>
+                </a>
+                <a href="#" class="second-item">
+                    <div class="cover" style="background-image: url(../assets/upload/fruit_09.jpg)"></div>
+                    <span class="txt">泰国龙眼</span>
+                </a>
+                <a href="#" class="second-item">
+                    <div class="cover" style="background-image: url(../assets/upload/fruit_10.jpg)"></div>
+                    <span class="txt">云南蒙自石榴</span>
+                </a>
+            </div>
+            <!-- // 新品推荐 -->
+            <!-- 热带水果 -->
+            <div class="shop-headline">
+                <a href="#" class="more">更多</a>
+                <i class="shop-icon-sale"></i>
+                <span>热带水果</span>
+            </div>
+            <!-- // 热带水果 -->
+            <!-- 商品列表 -->
+            <div id="J_listWrapper" class="product-list">
+                <a href="#">
+                    <div class="pic" style="background-image: url(../assets/upload/fruit_6.jpg)"></div>
+                    <div class="main-info">
+                        <div class="txt">海南芒果5斤新鲜水果 大青芒果三亚特产</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic" style="background-image: url(../assets/upload/fruit_7.jpg)"></div>
+                    <div class="main-info">
+                        <div class="txt">精选珍珠番石榴 台湾芭乐</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic" style="background-image: url(../assets/upload/fruit_8.jpg)"></div>
+                    <div class="main-info">
+                        <div class="txt">山竹5A级热带进口水果5斤特级装现</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic" style="background-image: url(../assets/upload/fruit_9.jpg)"></div>
+                    <div class="main-info">
+                        <div class="txt">红心西柚葡萄柚柚子</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic" style="background-image: url(../assets/upload/fruit_6.jpg)"></div>
+                    <div class="main-info">
+                        <div class="txt">海南芒果5斤新鲜水果 大青芒果三亚特产</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="pic" style="background-image: url(../assets/upload/fruit_7.jpg)"></div>
+                    <div class="main-info">
+                        <div class="txt">精选珍珠番石榴 台湾芭乐</div>
+                        <div class="price"><span class="pull-right">39人已购买</span><span class="pull-left">¥3.80</span></div>
+                    </div>
+                </a>
+            </div>
+            <!-- // 商品列表 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- Gotop -->
+<a href="#" class="gotop"></a>
+<!-- // Gotop -->
+<!-- 快捷菜单 -->
+<div class="menu-fixed">
+    <a href="javascript:;" id="J_menuTrigger" class="menu-trigger" onclick="HS.menuFixed._toggle();"></a>
+    <ul>
+        <li><a href="#"><span class="icon-home"></span>商城首页</a></li>
+        <li><a href="#"><span class="icon-cart"></span>购物车</a></li>
+        <li><a href="#"><span class="icon-user"></span>个人中心</a></li>
+    </ul>
+</div>
+<!-- // 快捷菜单 -->
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script>
+    var HS = HS || {};
+    ;(function($){
+        HS.menuFixed = { // 右下角快捷菜单
+            _toggle: function(e){
+                var ev = event || window.event;
+                if ($('.mask').length) {
+                    $('.mask').remove();
+                } else {
+                    $('body').append('<div class="mask"/>');
+                }
+                $(ev.currentTarget).parent().toggleClass('open');
+            },
+            _hide: function(){
+                var $menuFixed = $('.menu-fixed');
+                if ($menuFixed.hasClass('open')) {
+                    $menuFixed.removeClass('open');
+                    $('.mask').remove();
+                }
+            },
+            _init: function(){
+                $('body').on('click','.mask',function(){
+                    HS.menuFixed._hide();
+                });
+            }
+        };
+        HS.shopSubMenu = { //商品分类
+            _toggle: function(e){
+                var ev = event || window.event;
+                if ($('.shop-submenu-mask').length) {
+                    $('.shop-submenu-mask').remove();
+                } else {
+                    $('#content').append('<div class="shop-submenu-mask"/>');
+                }
+                $(ev.currentTarget).parent().toggleClass('active');
+            },
+            _hide: function(){
+                var $hasSubmenu = $('.shop-bar-tab .has-submenu');
+                if ($hasSubmenu.hasClass('active')) {
+                    $hasSubmenu.removeClass('active');
+                    $('.shop-submenu-mask').remove();
+                }
+            },
+            _init: function(){
+                $('body').on('click','.shop-submenu-mask',function(){
+                    HS.shopSubMenu._hide();
+                });
+            }
+        };
+    }(jQuery));
+    $(function(){
+        HS.menuFixed._init();
+        HS.shopSubMenu._init();
+    });
+</script>
+</body>
+</html>

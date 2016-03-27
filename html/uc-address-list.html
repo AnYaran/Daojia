@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-我的地址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>加载中...</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="javascript:history.go(-1);" class="left-back header-left"></a>
+    <h1 class="header-title">我的地址</h1>
+    <a href="#" class="header-right btn btn-link">新增</a>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <!-- 地址列表 -->
+            <div class="uc-addr-item">
+                <div class="item-body">
+                    <div class="item-name"><span>松子</span>13308980898</div>
+                    <div class="item-detail">海南省海口市龙华区国贸大厦海涯国际大厦8D</div>
+                </div>
+                <div class="item-actions">
+                    <div class="pull-right">
+                        <a href="#"><i class="icon-edit"></i><span>编辑</span></a>
+                        <a href="#"><i class="icon-trash"></i><span>删除</span></a>
+                    </div>
+                    <input class="square-icheck" id="addr_1" type="checkbox" checked><label for="addr_1">设置为默认地址</label>
+                </div>
+            </div>
+            <div class="uc-addr-item">
+                <div class="item-body">
+                    <div class="item-name"><span>松子</span>13308980898</div>
+                    <div class="item-detail">海南省海口市龙华区国贸大厦海涯国际大厦8D</div>
+                </div>
+                <div class="item-actions">
+                    <div class="pull-right">
+                        <a href="#"><i class="icon-edit"></i><span>编辑</span></a>
+                        <a href="#"><i class="icon-trash"></i><span>删除</span></a>
+                    </div>
+                    <input class="square-icheck" id="addr_2" type="checkbox"><label for="addr_2">设置为默认地址</label>
+                </div>
+            </div>
+            <!-- // 地址列表 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+</body>
+</html>

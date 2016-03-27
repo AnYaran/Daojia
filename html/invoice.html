@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-发票信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="javascript:history.go(-1);" class="header-left left-back"></a>
+    <h1 class="header-title">发票信息</h1>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <div class="invoice-block first-child">
+                <div class="tit">发票类型</div>
+                <div class="inner">
+                    <input type="radio" name="invoice-type" id="type_0" class="cm-check" checked onclick="showTab(0);"><label for="type_0">普通发票（纸质）</label>
+                    <input type="radio" name="invoice-type" id="type_1" class="cm-check ml25" onclick="showTab(1);"><label for="type_1">增值税发票</label>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="tab_0" class="tab-pane active">
+                    <div class="invoice-block mt10">
+                        <div class="tit">发票抬头<small>可输入个人/单位名称</small></div>
+                        <div class="inner">
+                            <input type="text" class="input-txt" value="个人">
+                        </div>
+                    </div>
+                    <div class="invoice-block mt10">
+                        <div class="tit tit-bor">发票内容</div>
+                        <div class="inner">
+                            <div class="mt15"><input type="radio" name="invoice-type" id="content_0" class="cm-check" checked><label for="content_0">明细</label></div>
+                            <div class="clearfix">
+                                <div class="label-inline">
+                                    <input type="radio" name="invoice-type" id="content_1" class="cm-check"><label for="content_1">其他</label>
+                                </div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="am-wingblank mt70" am-mode="15px">
+                        <button class="btn btn-success btn-block btn-xxl btn-radius" disabled>确认</button>
+                    </div>
+                </div>
+                <div id="tab_1" class="tab-pane">
+                    <div class="invoice-block mt10">
+                        <div id="step_0" class="step">
+                            <div class="tit">1.填写公司信息</div>
+                            <div class="inner">
+                                <div class="label-block">单位名称<em>*</em></div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                                <div class="label-block">纳税人识别码<em>*</em></div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                                <div class="label-block">注册地址<em>*</em></div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                                <div class="label-block">注册电话<em>*</em></div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                                <div class="label-block">开户银行<em>*</em></div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                                <div class="label-block">银行账户<em>*</em></div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="step_1" class="step">
+                            <div class="tit">2.填写收票人信息</div>
+                            <div class="color-gray f14 mt5 am-wingblank" am-mode="10px">发票内容：明细</div>
+                            <div class="inner">
+                                <div class="label-block">收票人姓名<em>*</em></div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                                <div class="label-block">收票人手机<em>*</em></div>
+                                <div class="controls">
+                                    <input type="text" class="input-txt">
+                                </div>
+                                <div class="label-block">详细地址<em>*</em></div>
+                                <div class="controls">
+                                    <textarea class="input-txt" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="am-wingblank mt25" am-mode="15px">
+                        <button class="btn btn-success btn-block btn-xxl btn-radius" disabled>下一步</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- Gotop -->
+<a href="#" class="gotop"></a>
+<!-- // Gotop -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script>
+    function showTab(id){
+        $('#tab_'+id).addClass('active').siblings('.tab-pane').removeClass('active');
+    }
+</script>
+</body>
+</html>

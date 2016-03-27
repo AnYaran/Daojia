@@ -1,0 +1,136 @@
+/*-------------------------
+  广告
+---------------------------*/
+.ad {
+	display: block;
+	margin-top: .5rem;
+	width: 100%;
+}
+.ad-list {
+	.clearfix;
+	margin-top: 0.5rem;
+	border-top: 1px solid #e0e0e0;
+	background-color: @white;
+	a {
+		float: left;
+		width: 50%;
+		padding: 0 0 0 0.5rem;
+		border-right: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+		&:nth-child(even) {
+			border-right-width: 0;
+		}
+		&:hover,
+		&:active {
+			background-color: #f5f5f5;
+		}
+		.pic {
+			float: right;
+			width: 3.65rem;
+			height: 3.2rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+		}
+		.main-info {
+			margin-right: 3.65rem;
+			line-height: 1;
+			.text,
+			.intro {
+				.text-overflow();
+			}
+			.text {
+				margin-top: 0.75rem;
+				font-size: 15px;
+				color: #5a5a5a;
+			}
+			.intro {
+				margin-top: 0.4rem;
+				font-size: 11px;
+				color: #999;
+			}
+		}
+	}
+}
+.ad-txt-list {
+	.clearfix;
+	margin-top: 0.5rem;
+	padding: 0 0.05rem;
+	a {
+		position: relative;
+		float: left;
+		display: block;
+		width: 7.55rem;
+		height: 2.7rem;
+		margin-left: 0.3rem;
+		padding: 0.4rem;
+		border-radius: 6px;
+		.text {
+			font-size: 16px;
+		}
+		.intro {
+			margin-top: 0.4rem;
+			font-size: 13px;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0.2rem;
+			right: 0.2rem;
+			display: inline-block;
+			width: 1.2rem;
+			height: 1.2rem;
+			line-height: 1;
+			background: url("../img/sprite.png") no-repeat;
+			background-size: 4.8rem auto;
+			overflow: hidden;
+		}
+		&:first-child {
+			background-color: #fed957;
+			color: #936e00;
+			&:after {
+				background-position: -2.4rem -8.4rem;
+			}
+		}
+		&:last-child {
+			background-color: #97ddff;
+			color: #2c7294;
+			&:after {
+				background-position: -3.6rem -8.4rem;
+			}
+		}
+	}
+}
+
+/* 广告管理 */
+.ad-item {
+	margin-bottom: 10px;
+	padding-top: 10px;
+	border-top: @border-default;
+	border-bottom: @border-default;
+	background-color: @white;
+	.ad-footer {
+		position: relative;
+		padding: 10px;
+		text-align: right;
+		input {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			top: 0;
+			width: 100%;
+			opacity: 0;
+		}
+		span {
+			position: relative;
+			z-index: 2;
+			cursor: pointer;
+			i {
+				vertical-align: middle;
+			}
+			color: @gray-dark;
+			font-size: 14px;
+		}
+	}
+}

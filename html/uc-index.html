@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-会员中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <h1 class="header-title">会员中心</h1>
+</header>
+<!-- // Header -->
+<!-- Bar Tab -->
+<nav class="bar-tab">
+    <div class="tab-item">
+        <a href="index.html">
+            <span class="icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+    </div>
+    <div class="tab-item has-submenu">
+        <a href="javascript:;">
+            <span class="icon-list"></span>
+            <span class="tab-label">商品分类</span>
+        </a>
+        <!-- submenu -->
+        <div id="submenu" class="submenu">
+            <a href="#">热带水果</a>
+            <a href="#">五谷杂粮</a>
+            <a href="#">工艺优品</a>
+            <a href="#">养生南药</a>
+            <a href="#">海南特产</a>
+            <a href="#">茶饮茶歇</a>
+            <a href="#">调味香料</a>
+            <a href="#">乡野原味</a>
+        </div>
+        <!-- // submenu -->
+    </div>
+    <div class="tab-item">
+        <a href="#">
+            <span class="icon-cart"></span>
+            <span class="tab-label">购物车</span>
+        </a>
+    </div>
+    <div class="tab-item active">
+        <a href="#">
+            <span class="icon-user"></span>
+            <span class="tab-label">个人中心</span>
+        </a>
+    </div>
+</nav>
+<!-- // Bar Tab -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <div class="uc-binfo">
+                <div class="uc-avatar"><img src="../assets/upload/avatar_03.jpg"></div>
+                <div class="uc-uname">高圆圆</div>
+            </div>
+            <!-- 订单快速入口 -->
+            <div class="uc-order-quickentry">
+                <a href="#" class="flex-item">
+                    <div class="item-top">
+                        <i class="uc-icon-card"></i>
+                        <span class="num">3</span>
+                    </div>
+                    <span class="txt">待付款</span>
+                </a>
+                <a href="#" class="flex-item">
+                    <div class="item-top">
+                        <i class="uc-icon-package"></i>
+                        <span class="num">323</span>
+                    </div>
+                    <span class="txt">待发货</span>
+                </a>
+                <a href="#" class="flex-item">
+                    <div class="item-top">
+                        <i class="uc-icon-truck"></i>
+                        <span class="num">3</span>
+                    </div>
+                    <span class="txt">待收货</span>
+                </a>
+                <a href="#" class="flex-item">
+                    <div class="item-top">
+                        <i class="uc-icon-flower"></i>
+                        <span class="num">3</span>
+                    </div>
+                    <span class="txt">待评价</span>
+                </a>
+                <a href="#" class="flex-item">
+                    <div class="item-top">
+                        <i class="uc-icon-refund"></i>
+                        <span class="num">3</span>
+                    </div>
+                    <span class="txt">退款/退货</span>
+                </a>
+            </div>
+            <!-- // 订单快速入口 -->
+            <div class="uc-list">
+                <a href="#" class="uc-list-item">
+                    <i class="uc-icon-order"></i>
+                    <div class="uc-list-content">我的订单</div>
+                    <div class="uc-list-arrow">
+                        <span class="icon-arrow-right"></span>
+                    </div>
+                </a>
+            </div>
+            <!--  其他快速入口 -->
+            <div class="uc-list mt10">
+                <a href="#" class="uc-list-item">
+                    <i class="uc-icon-cart"></i>
+                    <div class="uc-list-content">购物车</div>
+                    <span class="icon-arrow-right"></span>
+                </a>
+                <a href="#" class="uc-list-item">
+                    <i class="uc-icon-star"></i>
+                    <div class="uc-list-content">我的收藏</div>
+                    <span class="icon-arrow-right"></span>
+                </a>
+                <a href="#" class="uc-list-item">
+                    <i class="uc-icon-addr"></i>
+                    <div class="uc-list-content">我的地址</div>
+                    <span class="icon-arrow-right"></span>
+                </a>
+                <a href="#" class="uc-list-item">
+                    <i class="uc-icon-user"></i>
+                    <div class="uc-list-content">个人资料</div>
+                    <span class="icon-arrow-right"></span>
+                </a>
+            </div>
+            <!-- // 其他快速入口 -->
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- Gotop -->
+<a href="#" class="gotop"></a>
+<!-- // Gotop -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+</body>
+</html>

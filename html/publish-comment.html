@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-评价商品</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="#" class="header-left left-back"></a>
+    <h1 class="header-title">评价商品</h1>
+</header>
+<!-- // Header -->
+<!-- Bar Tab -->
+<div class="footer-bar-btn">
+    <button type="button" id="J_submitBtn" class="btn btn-success btn-block btn-xl btn-radius" onclick="validForm()">提交评价</button>
+</div>
+<!-- // Bar Tab -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content">
+            <div id="J_cmtList">
+                <div class="cmt-item" data-proid="22">
+                    <div class="cmt-pro-info">
+                        <div class="cmt-pro-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                        <div class="cmt-pro-info-main">
+                            <div class="txt">现摘云南蒙自石榴皮薄多汁软籽很甜新鲜水果特产石榴礼盒12个装</div>
+                            <div class="price">¥29</div>
+                        </div>
+                    </div>
+                    <div class="cmt-main">
+                        <div class="cmt-star-outer">
+                            <input type="hidden" name="iScore" class="J_iScore">
+                            <ul class="star-lg J_star">
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                            </ul>
+                            <label class="cmt-label">综合打分</label>
+                        </div>
+                        <div class="cmt-txt-control">
+                            <textarea placeholder="亲，这个商品怎么样？快来说两句！" class="input-txtarea J_cmtContent">石榴很甜，很好吃！</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmt-item" data-proid="23">
+                    <div class="cmt-pro-info">
+                        <div class="cmt-pro-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                        <div class="cmt-pro-info-main">
+                            <div class="txt">海口海岛阳光 2期海口海岛阳光 2期</div>
+                            <div class="price"><small>￥</small>122.00</div>
+                        </div>
+                    </div>
+                    <div class="cmt-main">
+                        <div class="cmt-star-outer">
+                            <input type="hidden" name="iScore" class="J_iScore">
+                            <ul class="star-lg J_star">
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                            </ul>
+                            <label class="cmt-label">综合打分</label>
+                        </div>
+                        <div class="cmt-txt-control">
+                            <textarea placeholder="亲，这个商品怎么样？快来说两句！" class="input-txtarea J_cmtContent"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmt-item" data-proid="23">
+                    <div class="cmt-pro-info">
+                        <div class="cmt-pro-cover" style="background-image: url(../assets/upload/fruit_5.jpg)"></div>
+                        <div class="cmt-pro-info-main">
+                            <div class="txt">海口海岛阳光 2期海口海岛阳光 2期</div>
+                            <div class="price"><small>￥</small>122.00</div>
+                        </div>
+                    </div>
+                    <div class="cmt-main">
+                        <div class="cmt-star-outer">
+                            <input type="hidden" name="iScore" class="J_iScore">
+                            <ul class="star-lg J_star">
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                                <li class="on"></li>
+                            </ul>
+                            <label class="cmt-label">综合打分</label>
+                        </div>
+                        <div class="cmt-txt-control">
+                            <textarea placeholder="亲，这个商品怎么样？快来说两句！" class="input-txtarea J_cmtContent"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+<script src="../assets/js/page/page-cmt.js"></script>
+</body>
+</html>

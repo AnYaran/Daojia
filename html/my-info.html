@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>赫森-我的信息</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="keywords" content="赫森">
+    <meta name="description" content="赫森">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link type="text/css" rel="stylesheet" href="../assets/css/hesen.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+    <script>(function(){var b=document.documentElement,a=function(){var a=b.getBoundingClientRect().width;b.style.fontSize=0.0625*(640<=a?640:a)+"px"},c=null;window.addEventListener("resize",function(){clearTimeout(c);c=setTimeout(a,300)});a()})();</script>
+</head>
+<body onload="loaded()">
+<!-- Loading -->
+<div id="loading" class="loading">
+    <div class="toast"><div class="toast-text"><span class="toast-icon-loading"></span>载入中</div></div>
+</div>
+<!-- // Loading -->
+<!-- Header -->
+<header class="header">
+    <a href="#" class="header-left left-back"></a>
+    <h1 class="header-title">我的信息</h1>
+</header>
+<!-- // Header -->
+<!-- Content -->
+<div id="wrapper">
+    <div id="scroller">
+        <div id="content" class="content bg-white">
+            <div class="uc-binfo-top">
+                <img class="avatar-cover" src="../assets/upload/avatar_02.jpg" width="67" height="67"><span class="user-name">MISS</span>
+                <div class="avatar-upload">
+                    <span>更改头像</span>
+                    <input type="file">
+                </div>
+            </div>
+            <form class="uc-form-horizontal am-wingblank" am-mode="15px">
+                <div class="form-group">
+                    <label class="control-label">店铺名称</label>
+                    <div class="controls">
+                        <input type="text" placeholder="请输入店铺名称" value="海南果果家">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">店铺简介</label>
+                    <div class="controls">
+                        <textarea placeholder="请输入店铺简介"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">原 密 码</label>
+                    <div class="controls">
+                        <input type="password" placeholder="如不修改密码，请留空">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">新 密 码</label>
+                    <div class="controls">
+                        <input type="password" placeholder="如不修改密码，请留空">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">新手机号</label>
+                    <div class="controls">
+                        <input type="text" placeholder="如不修改手机号，请留空">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">原手机号</label>
+                    <div class="controls captcha-wrap">
+                        <input type="text" placeholder="如不修改手机号，请留空" value="13308980898">
+                        <button class="btn btn-success btn-radius btn-lg" type="button">发送验证码</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">验 证 码</label>
+                    <div class="controls">
+                        <input type="text" placeholder="请输入手机验证码">
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="J_submitBtn" class="btn btn-block btn-success btn-xxl btn-radius">确认修改</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- // Content -->
+<!-- Gotop -->
+<a href="#" class="gotop"></a>
+<!-- // Gotop -->
+<script src="../assets/js/swiper.min.js"></script>
+<script src="../assets/js/iscroll-probe.js"></script>
+<script src="../assets/js/jquery-2.1.4.min.js"></script>
+<script src="../assets/js/hesen.js"></script>
+</body>
+</html>

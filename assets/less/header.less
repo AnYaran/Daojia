@@ -1,0 +1,148 @@
+/*-----------------------------
+  头部
+-------------------------------*/
+.header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 44px;
+	background-color: @green;
+	z-index: 9998;
+	a.active {
+		background-color: rgba(0,0,0,.1);
+	}
+	a:active {
+		background-color: rgba(0,0,0,.1);
+	}
+	a {
+		position: absolute;
+		top: 0;
+		width: 44px;
+		height: 44px;
+		text-align: center;
+		&:before {
+			position: relative;
+			top: 9px;
+			content: "";
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			line-height: 1;
+			background: url("../img/sprite.png") no-repeat;
+			background-size: 96px auto;
+			overflow: hidden;
+		}
+		&.header-left {
+			left: 0;
+			&.left-nav {
+				&:before {
+					background-position: 0 -24px;
+				}
+			}
+			&.left-back {
+				&:before {
+					background-position: 0 -216px;
+				}
+			}
+			&.btn-link {
+				width: auto;
+				padding: 0 10px;
+				color: @white;
+				line-height: 44px;
+				font-size: 15px;
+				&:before {
+					width: 0;
+					height: 0;
+					background: none !important;
+				}
+			}
+		}
+		&.header-right {
+			right: 0;
+			&.search-icon {
+				&:before {
+					background-position: -24px -216px;
+				}
+			}
+			&.cart-icon {
+				&:before {
+					background-position: -72px -312px;
+				}
+			}
+			&.talk-icon {
+				&:before {
+					background-position: -48px -384px;
+				}
+			}
+			&.btn-link {
+				width: auto;
+				padding: 0 10px;
+				color: @white;
+				line-height: 44px;
+				font-size: 15px;
+				&:before {
+					width: 0;
+					height: 0;
+					background: none !important;
+				}
+			}
+		}
+
+	}
+	.header-title {
+		margin: 0 44px;
+		font-size: 17px;
+		color: @white;
+		font-weight: normal;
+		line-height: 44px;
+		text-align: center;
+	}
+
+	/* ���� */
+	& + .search-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 8px 0;
+		z-index: 9997;
+		border-bottom: 1px solid #dbdbdb;
+		background-color: @white;
+		-webkit-transition: top .3s ease-in-out;
+		        transition: top .3s ease-in-out;
+		.form-search {
+			margin-top: 0;
+			background-color: #f5f5f5;
+			.input-search {
+				background-color: #f5f5f5;
+			}
+		}
+		.btn-collapse {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 44px;
+			height: 44px;
+			text-align: center;
+			&:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 5px 6px;
+				border-color: transparent transparent #adadad transparent;
+			}
+			&:hover,
+			&:active {
+				background-color: rgba(0,0,0,.1);
+			}
+		}
+		&.active {
+			top: 44px;
+		}
+	}
+}
+.header + .second-header-bar {
+	top: 44px;
+}
